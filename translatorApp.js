@@ -37,7 +37,7 @@ async function runApp() {
 async function startServer() {
     try {
         await client.connect();
-        const db = client.db("CMSC335_DB");
+        const db = client.db("CMSC335_FinalProj");
         const collection = db.collection("translations");
         app.listen(port);
         console.log(`Web server started and running at http://localhost:${port}`);
