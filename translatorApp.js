@@ -60,7 +60,7 @@ async function startServer() {
                 translated_text: ""
             };
 
-            translation_url =`https://api.funtranslations.com/translate/${data.translation_language}.json`;
+            translation_url = `https://api.funtranslations.com/translate/${data.translation_language}.json`;
             let result = await fetch(translation_url, {
                 method: 'POST',
                 headers: {
@@ -69,11 +69,41 @@ async function startServer() {
                 },
                 body: JSON.stringify({ "text": data.input_text })
             });
-            
-            let response_json = await result.json();
-            data.translated_text = response_json.contents.translated; 
-            response.render("translated_text", data);
-            await collection.insertOne(data);
+
+            let resultJson = await result.json();
+            if (resultJson.error.code == 429) {
+                data = {
+                    message: resultJson.error.message
+                }
+                response.render("error_page", data);
+            } else {
+                data.translated_text = resultJson.translated;
+                await collection.insertOne(data);
+                response.render("translated_text", data);
+            }
+        });
+
+        app.post("/getTranslationsByEmail", async (request, response) => {
+            let data = {
+                name: request.body.name,
+                email: request.body.email,
+                translations: ""
+            };
+            result_table = "<table border = 1><tr><th>Original Text</th><th>Translation Language</th><th>Translated Text</th></tr>";
+
+            let result = await collection.find({
+                email: request.body.email
+            }).toArray();
+            console.log(result);
+
+            for (const entry in result) {
+                result_table += "<tr><td>entry.input_text</td><td>entry.translation_language</td><td>entry.translated_text</td></tr>";
+            }
+
+            result_table += "</table>";
+
+            data.translations = result_table;
+            response.render("translations_by_email_display", data);
         });
 
 
