@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>translate</title>
+</head>
+
+<body>
+    <h1>Translate Text</h1>
+    <form action="http://localhost:5050/translate" method="post">
+        <fieldset>
+            Name: <input type="text" name="name">
+            Email Address: <input type="email" name="email">
+            <br>
+            Text to Translate: 
+            <br>
+            <textarea name="input_text" rows="5" cols="90"></textarea>
+            <br>
+            Translate to: 
+            <select name="translation_language">
+                <option value="yoda">Yoda</option>
+                <option value="sith">Sith</option>
+                <option value="mandalorian">Mandalorian</option>
+                <option value="klingon">Klingon</option>
+                <option value="dothraki">Dothraki</option>
+                <option value="valyrian">Valyrian</option>
+                <option value="piglatin">Pig-Latin</option>
+                <option value="groot">Groot</option>
+                <option value="emoji">Emoji</option>
+              </select>
+        </fieldset>
+        <input type="reset" />
+        <input type="submit" value="Translate" />
+    </form>
+    <hr>
+    <a href="/">Back to Home</a>
+</body>
+
+</html>
