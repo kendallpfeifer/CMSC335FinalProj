@@ -78,7 +78,7 @@ async function startServer() {
                 }
                 response.render("error_page", data);
             } else {
-                data.translated_text = resultJson.translated;
+                data.translated_text = resultJson.contents.translated;
                 await collection.insertOne(data);
                 response.render("translated_text", data);
             }
@@ -95,10 +95,10 @@ async function startServer() {
             let result = await collection.find({
                 email: request.body.email
             }).toArray();
-            console.log(result);
+            // console.log(result);
 
-            for (const entry in result) {
-                result_table += "<tr><td>entry.input_text</td><td>entry.translation_language</td><td>entry.translated_text</td></tr>";
+            for (const entry of result) {
+                result_table += `<tr><td>${entry.input_text}</td><td>${entry.translation_language}</td><td>${entry.translated_text}</td></tr>`;
             }
 
             result_table += "</table>";
