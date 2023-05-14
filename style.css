@@ -1,3 +1,36 @@
 body {
   background-color: #ddc3a5;
+  color: #201e20;
+}
+
+img {
+  border: solid black 2px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#buttons {
+  text-align: center;
+}
+
+button {
+  width: 300px;
+  height: 80px;
+  background-color: #e0a96d;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+#button1 {
+  margin-right: 10px;
+}
+
+#button2 {
+  margin-left: 10px;
+}
+
+#index_title {
+  text-align: center;
+  padding-top: 20px;
 }
