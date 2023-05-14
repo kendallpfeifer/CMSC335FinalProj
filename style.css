@@ -4,7 +4,7 @@ body {
 }
 
 img {
-  border: solid black 2px;
+  border: solid #201e20 2px;
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -15,11 +15,12 @@ img {
 }
 
 button {
-  width: 300px;
+  width: 280px;
   height: 80px;
   background-color: #e0a96d;
   border-radius: 20px;
   font-size: 18px;
+  border: solid 1px #201e20;
 }
 
 #button1 {
@@ -30,7 +31,31 @@ button {
   margin-left: 10px;
 }
 
-#index_title {
+h1 {
   text-align: center;
   padding-top: 20px;
+}
+
+form {
+  border: solid 1px #201e20;
+  width: 85%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form_contents {
+  padding: 20px;
+}
+
+.footer {
+  margin-left: 7.5%;
+}
+
+input[type="text"] {
+  width: 200px;
+}
+
+input[type="email"] {
+  width: 300px;
 }

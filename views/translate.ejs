@@ -10,13 +10,15 @@
 <body>
     <h1>Translate Text</h1>
     <form action="http://localhost:5050/translate" method="post">
-        <fieldset>
+        <!-- <fieldset> -->
+        <div class="form_contents">
             Name: <input type="text" name="name">
+            <br><br>
             Email Address: <input type="email" name="email">
-            <br>
+            <br><br>
             Text to Translate: 
             <br>
-            <textarea name="input_text" rows="5" cols="90"></textarea>
+            <textarea name="input_text" rows="20" cols="80"></textarea>
             <br>
             Translate to: 
             <select name="translation_language">
@@ -30,12 +32,15 @@
                 <option value="groot">Groot</option>
                 <option value="emoji">Emoji</option>
               </select>
-        </fieldset>
-        <input type="reset" />
-        <input type="submit" value="Translate" />
+        <!-- </fieldset> -->
+            <br><br>
+            <input type="reset" />
+            <input type="submit" value="Translate" />
+        </div>
     </form>
-    <hr>
-    <a href="/">Back to Home</a>
+    <!-- <hr> -->
+    <br><br>
+    <a class="footer" href="/">Back to Home</a>
 </body>
 
 </html>
