@@ -70,8 +70,9 @@ async function startServer() {
                 body: JSON.stringify({ "text": data.input_text })
             });
 
+
             let resultJson = await result.json();
-            if (resultJson.error.code == 429) {
+            if (resultJson.error?.code == 429) {
                 data = {
                     message: resultJson.error.message
                 }
