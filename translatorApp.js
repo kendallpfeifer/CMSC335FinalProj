@@ -10,6 +10,7 @@ const client = new MongoClient(uri);
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static(__dirname));
 
 app.get('/', function (req, response) {
     response.render('index');
