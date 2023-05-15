@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <strong>Name: </strong><%- name %>
+
+    <!-- <strong>Name: </strong><%- name %>
     <br>
     <strong>Email Address: </strong><%- email %>
     <br>
@@ -18,10 +19,16 @@
     <br>
     <strong>Translated Text: </strong>
     <br>
-    <%- translated_text %>
+    <div id="translated_text"><%- translated_text %></div> -->
+    <div class="allcontent">
+        <h2>Translation for <%- name %> at <%- email %></h2>
+        <h4>The translation for <%- input_text %> in <%- translation_language %> is:</h4>
+        <div id="translated_text"><%- translated_text %></div>
+    </div>
+
     <br>
     <br>
-    <a href="/">HOME</a>
+    <a class="footer" href="/">HOME</a>
 
 </body>
 </html>

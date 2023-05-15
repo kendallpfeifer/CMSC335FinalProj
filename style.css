@@ -120,3 +120,14 @@ td {
 #removeTranslations {
   width: 240px;
 }
+
+p {
+  text-align: center;
+}
+
+#translated_text {
+  border: solid 1px #201e20;
+  width: 85%;
+  background-color: #ecd9c3;
+  padding: 15px;
+}
