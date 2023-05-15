@@ -24,9 +24,9 @@ app.get('/translationsByEmailOrName', function (req, response) {
     response.render('translationsByEmailOrName');
 });
 
-// app.get('/removeTranslations', function(req, response) {
-//     response.render(removeTranslations);
-// })
+app.get('/removeTranslations', function(req, response) {
+    response.render('removeTranslations');
+})
 
 runApp();
 
@@ -126,6 +126,26 @@ async function startServer() {
 
             data.translations = result_table;
             response.render("translations_by_email_or_name_display", data);
+        });
+
+        app.post("/removeTranslationsByEmailOrName", async (request, response) => {
+            console.log(request.body);
+            let data = {
+                type: "",
+            };
+
+            if (request.body.getTranslationsType === "Remove Translations by Name") {
+                data.type = request.body.name;
+                let filter = {name: request.body.name};
+                await collection.deleteMany(filter);
+            
+            } else {
+                data.type = request.body.email;
+                let filter = {name: request.body.name};
+                await collection.deleteMany(filter);
+            }
+            
+            response.render("remove_translations_display", data);
         });
 
 

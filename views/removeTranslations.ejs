@@ -8,11 +8,20 @@
 </head>
 
 <body>
-    <h1>Remove Translations</h1>
-    <form action="" method="post">
-        <input type="submit" value="Remove All Translations" />
+    <h1>Remove Translations By Email or Name</h1>
+    <form class="form" action="http://localhost:5050/removeTranslationsByEmailOrName" method="post">
+        
+        <div class="form_contents">
+            <strong>Name: </strong><input type="text" name="name">
+            <br><br>
+            <strong>Email Address: </strong><input type="email" name="email">
+            
+            <br><br>
+            <input type="reset" />
+            <input id="removeTranslations" type="submit" value="Remove Translations by Name" name="getTranslationsType" />
+            <input id="removeTranslations" type="submit" value="Remove Translations by Email" name="getTranslationsType" />
+        </div>
     </form>
-    <div></div>
     <br>
     <a class="footer" href="/">Back to Home</a>
 </body>
