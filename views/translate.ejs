@@ -12,15 +12,15 @@
     <form action="http://localhost:5050/translate" method="post">
         <!-- <fieldset> -->
         <div class="form_contents">
-            Name: <input type="text" name="name">
+            <strong>Name: </strong><input type="text" name="name">
             <br><br>
-            Email Address: <input type="email" name="email">
+            <strong>Email Address: </strong><input type="email" name="email">
             <br><br>
-            Text to Translate: 
+            <strong>Text to Translate:</strong>
             <br>
-            <textarea name="input_text" rows="20" cols="80"></textarea>
+            <textarea name="input_text" rows="15"></textarea>
             <br>
-            Translate to: 
+            <strong>Translate to: </strong>
             <select name="translation_language">
                 <option value="yoda">Yoda</option>
                 <option value="sith">Sith</option>
@@ -39,7 +39,7 @@
         </div>
     </form>
     <!-- <hr> -->
-    <br><br>
+    <br>
     <a class="footer" href="/">Back to Home</a>
 </body>
 

@@ -1,6 +1,7 @@
 body {
   background-color: #ddc3a5;
   color: #201e20;
+  font-size: 18px;
 }
 
 img {
@@ -42,10 +43,12 @@ form {
   display: block;
   margin-right: auto;
   margin-left: auto;
+  background-color: #ecd9c3;
 }
 
 .form_contents {
   padding: 20px;
+  margin-left: 10px;
 }
 
 .footer {
@@ -54,8 +57,30 @@ form {
 
 input[type="text"] {
   width: 200px;
+  font-size: 16px;
 }
 
 input[type="email"] {
   width: 300px;
+  font-size: 16px;
+}
+
+textarea {
+  font-size: 16px;
+  width: 95%;
+}
+
+input[type="reset"],
+input[type="submit"] {
+  width: 100px;
+  height: 35px;
+  background-color: #e0a96d;
+  border-radius: 15px;
+  font-size: 16px;
+  border: solid 1px #201e20;
+  margin: 5px;
+}
+
+select {
+  font-size: 16px;
 }
