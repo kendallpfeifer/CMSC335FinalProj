@@ -20,9 +20,13 @@ app.get('/translate', function (req, response) {
     response.render('translate');
 });
 
-app.get('/translationsByEmail', function (req, response) {
-    response.render('translationsByEmail');
+app.get('/translationsByEmailOrName', function (req, response) {
+    response.render('translationsByEmailOrName');
 });
+
+// app.get('/removeTranslations', function(req, response) {
+//     response.render(removeTranslations);
+// })
 
 runApp();
 
@@ -85,17 +89,33 @@ async function startServer() {
             }
         });
 
-        app.post("/getTranslationsByEmail", async (request, response) => {
+        app.post("/getTranslationsByEmailOrName", async (request, response) => {
+            console.log(request.body);
             let data = {
-                name: request.body.name,
-                email: request.body.email,
+                type: "",
                 translations: ""
             };
+
             result_table = "<table border = 1><tr><th>Original Text</th><th>Translation Language</th><th>Translated Text</th></tr>";
 
-            let result = await collection.find({
-                email: request.body.email
-            }).toArray();
+            let result = "";
+
+            if (request.body.getTranslationsType === "Get Translations by Name") {
+                data.type = request.body.name;
+                result = await collection.find({
+                    name: request.body.name
+                }).toArray();
+            
+            } else {
+                data.type = request.body.email;
+                result = await collection.find({
+                    email: request.body.email
+                }).toArray();
+            }
+            
+            // let result = await collection.find({
+            //     email: request.body.email
+            // }).toArray();
             // console.log(result);
 
             for (const entry of result) {
@@ -105,7 +125,7 @@ async function startServer() {
             result_table += "</table>";
 
             data.translations = result_table;
-            response.render("translations_by_email_display", data);
+            response.render("translations_by_email_or_name_display", data);
         });
 
 
