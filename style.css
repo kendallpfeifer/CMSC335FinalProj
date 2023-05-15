@@ -2,6 +2,7 @@ body {
   background-color: #ddc3a5;
   color: #201e20;
   font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 img {
@@ -22,6 +23,7 @@ button {
   border-radius: 20px;
   font-size: 18px;
   border: solid 1px #201e20;
+  font-family: inherit;
 }
 
 #button1 {
@@ -58,16 +60,19 @@ form {
 input[type="text"] {
   width: 200px;
   font-size: 16px;
+  font-family: inherit;
 }
 
 input[type="email"] {
   width: 300px;
   font-size: 16px;
+  font-family: inherit;
 }
 
 textarea {
   font-size: 16px;
   width: 95%;
+  font-family: inherit;
 }
 
 input[type="reset"],
@@ -79,8 +84,28 @@ input[type="submit"] {
   font-size: 16px;
   border: solid 1px #201e20;
   margin: 5px;
+  font-family: inherit;
 }
 
 select {
   font-size: 16px;
+  font-family: inherit;
+}
+
+#getTranslations {
+  width: 135px;
+}
+
+table {
+  border: 2px solid #201e20;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+.allcontent {
+  padding-top: 20px;
+  margin-left: 7.5%;
 }

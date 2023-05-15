@@ -10,15 +10,19 @@
 <body>
     <h1>Get Translations By Email</h1>
     <form action="http://localhost:5050/getTranslationsByEmail" method="post">
-        <fieldset>
-            Name: <input type="text" name="name">
-            Email Address: <input type="email" name="email">
-        </fieldset>
-        <input type="reset" />
-        <input type="submit" value="Get Translations" />
+        <!-- <fieldset> -->
+        <div class="form_contents">
+            <strong>Name: </strong><input type="text" name="name">
+            <br><br>
+            <strong>Email Address: </strong><input type="email" name="email">
+        <!-- </fieldset> -->
+            <br><br>
+            <input type="reset" />
+            <input id="getTranslations" type="submit" value="Get Translations" />
+        </div>
     </form>
-    <hr>
-    <a href="/">Back to Home</a>
+    <br>
+    <a class="footer" href="/">Back to Home</a>
 </body>
 
 </html>
