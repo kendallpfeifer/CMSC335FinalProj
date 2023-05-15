@@ -18,12 +18,13 @@ img {
 
 button {
   width: 280px;
-  height: 80px;
+  height: 85px;
   background-color: #e0a96d;
   border-radius: 20px;
   font-size: 18px;
   border: solid 1px #201e20;
   font-family: inherit;
+  vertical-align: top;
 }
 
 #button1 {
