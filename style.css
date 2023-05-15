@@ -31,13 +31,33 @@ button {
   margin-right: 8px;
 }
 
+#button1:hover {
+  background-color: #ddc3a5;
+}
+
 #button2 {
   margin-left: 4px;
   margin-right: 4px;
 }
 
+#button2:hover {
+  background-color: #ddc3a5;
+}
+
 #button3 {
   margin-left: 8px;
+}
+
+#button3:hover {
+  background-color: #ddc3a5;
+}
+
+#button4:hover {
+  background-color: #ddc3a5;
+}
+
+#removeTranslations:hover {
+  background-color: #ddc3a5;
 }
 
 h1 {
