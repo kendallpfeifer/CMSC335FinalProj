@@ -1,6 +1,6 @@
 Team Members: 
 Kendall Pfeifer (kpfeifer)
-Medha Kruruganti (mkurugan)
+Medha Kuruganti (mkurugan)
 
 App Description: 
 This app is a fun one! It allows you to translate any phrase
@@ -8,6 +8,7 @@ to a variety of languages, including Emoji and Mandalorian using
 the Fun Translations API. It also allows you to look up all of your 
 previous translations by name or email, and to delete them by name or
 email, with all translations being stored in our MongoDB. 
+Run this project using `node translatorApp.js`
 
 LINK TO THE HOSTED APP: https://sore-tan-vulture-wrap.cyclic.app/
 
