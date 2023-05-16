@@ -1,6 +1,6 @@
 Team Members: 
-Kendall Pfeifer (116593069)
-Medha Kruruganti (116489508)
+Kendall Pfeifer (kpfeifer)
+Medha Kruruganti (mkurugan)
 
 App Description: 
 This app is a fun one! It allows you to translate any phrase
