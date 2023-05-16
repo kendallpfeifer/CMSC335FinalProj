@@ -112,11 +112,6 @@ async function startServer() {
                     email: request.body.email
                 }).toArray();
             }
-            
-            // let result = await collection.find({
-            //     email: request.body.email
-            // }).toArray();
-            // console.log(result);
 
             for (const entry of result) {
                 result_table += `<tr><td>${entry.input_text}</td><td>${entry.translation_language}</td><td>${entry.translated_text}</td></tr>`;
@@ -141,7 +136,7 @@ async function startServer() {
             
             } else {
                 data.type = request.body.email;
-                let filter = {name: request.body.name};
+                let filter = {name: request.body.email};
                 await collection.deleteMany(filter);
             }
             
